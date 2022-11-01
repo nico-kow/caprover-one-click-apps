@@ -65,7 +65,7 @@ caproverOneClickApp:
 # Define services
 services:
 
-    # Bitwarden service
+    # ntfy service
     $$cap_appname:
 
         # CapRover's special options
