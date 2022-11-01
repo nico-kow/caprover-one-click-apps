@@ -51,14 +51,7 @@ caproverOneClickApp:
                 Specify the version tag to install.  
                 Click [here](https://hub.docker.com/r/binwiederhier/ntfy/tags) for a list of available tags.
             defaultValue: v1.28.0
-
-        # Variable for time zone
-        -   id: $$cap_tz
-            label: Time Zone
-            description: |-
-                Specify your system's time zone.  
-                Click [here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) for a list of available time zones.
-            defaultValue: UTC
+            validRegex: /^([^\s^\/])+$/
 
 
 
@@ -73,9 +66,6 @@ services:
             dockerfileLines:
                 - FROM binwiederhier/ntfy:$$cap_appversion
                 - CMD ["serve"]
-
-        environment:
-            TZ: $$cap_tz
 
         # Define volumes
         volumes:
