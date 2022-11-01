@@ -1,0 +1,24 @@
+{
+	"name": "@nico-kow/caprover-one-click-apps",
+	"version": "1.0.0",
+	"description": "My Personal One-Click-App Repository for CapRover",
+	"scripts": {
+		"build": "rimraf ./dist && node ./scripts/build-one-click-apps.js && node ./scripts/build-one-click-apps-from-v4.js",
+		"validate": "node ./scripts/validate-apps.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nico-kow/caprover-one-click-apps.git"
+	},
+	"author": "Nico Kowalczyk",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/nico-kow/caprover-one-click-apps/issues"
+	},
+	"homepage": "https://github.com/nico-kow/caprover-one-click-apps",
+	"devDependencies": {
+		"fs-extra": "^10.0.0",
+		"rimraf": "^3.0.2",
+		"yaml": "^1.10.2"
+	}
+}
